@@ -88,7 +88,7 @@ class Dashboard extends StatelessWidget {
                               children: <Widget>[
                                 Image.asset('assets/images/login.png'),
                                 Text(
-                                  "My Articles",
+                                  "My Entries",
                                   style: GoogleFonts.vt323(fontSize: 30),
                                 )
                               ],

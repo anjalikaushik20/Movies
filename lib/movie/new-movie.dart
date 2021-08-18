@@ -131,7 +131,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Your Article here!',
+                        hintText: 'Your Movie here!',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -187,7 +187,7 @@ class _MovieEntryState extends State<MovieEntry> {
   }
 
   void _post() async {
-    await databaseReference.collection("articles").document().setData({
+    await databaseReference.collection("movies").document().setData({
       'description': description,
       'name': name,
       'occupation': occupation,
