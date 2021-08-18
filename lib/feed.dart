@@ -35,7 +35,7 @@ class _FeedState extends State<Feed> {
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
                   height: 40,
@@ -76,9 +76,9 @@ class _FeedState extends State<Feed> {
                         return ListView.builder(
                             itemCount: snapshot.data.length,
                             itemBuilder: (_, index) {
-                             return ListTile(
-                               title: Text(snapshot.data[index].data['title']),
-                             );
+                            //  return ListTile(
+                            //    title: Text(snapshot.data[index].data['title']),
+                            //  );
                               return Container(
                                 padding: EdgeInsets.all(5.0),
                                 child: Card(

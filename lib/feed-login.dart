@@ -76,9 +76,9 @@ class _FeedLoginState extends State<FeedLogin> {
                         return ListView.builder(
                             itemCount: snapshot.data.length,
                             itemBuilder: (_, index) {
-                             return ListTile(
-                               title: Text(snapshot.data[index].data['title']),
-                             );
+                            //  return ListTile(
+                            //    title: Text(snapshot.data[index].data['title']),
+                            //  );
                               return Container(
                                 padding: EdgeInsets.all(5.0),
                                 child: Card(
