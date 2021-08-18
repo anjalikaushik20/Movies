@@ -1,18 +1,26 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movies/Auth/feed-login.dart';
 
 class MovieDetailLogin extends StatefulWidget {
   final DocumentSnapshot movie;
 
   MovieDetailLogin({this.movie});
+  
 
   @override
   _MovieDetailLoginState createState() => _MovieDetailLoginState();
 }
 
 class _MovieDetailLoginState extends State<MovieDetailLogin> {
+
+  final databaseReference = Firestore.instance;
+  int flag = 0;
+  //DocumentSnapshot movie;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +59,34 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
             ),
             Divider(thickness: 2, color: Colors.black,),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FlatButton(
+                    onPressed: (){
+                      //edit function
+                    }, 
+                    child: Icon(
+                      Icons.edit,
+                      color: Colors.black,
+                      ),
+                    ),
+                  VerticalDivider(),
+                  FlatButton(
+                    onPressed: (){
+                      //delete function
+                      _delete();
+                    }, 
+                    child: Icon(
+                      Icons.delete,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/atricle_back.png"),
@@ -72,7 +107,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                             widget.movie.data['title'].toUpperCase(),
                             style: TextStyle(
                               fontFamily: 'Subway',
-                              fontSize: 35,
+                              fontSize: 30,
                             ),
                             textAlign: TextAlign.left,
                           ),
@@ -97,7 +132,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                             widget.movie.data['description'],
                             style: TextStyle(
                               fontFamily: 'Chenier',
-                              fontSize: 25,
+                              fontSize: 18,
                             ),
                             textAlign: TextAlign.justify,
                           ),
@@ -111,5 +146,43 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
         ),
       ),
     );
+  }
+
+  void _delete() async {
+    var uid = widget.movie.documentID;
+    await databaseReference.collection("movies").document(uid).delete();
+
+    flag = 1;
+    _postDeleted();
+  }
+
+  void _postDeleted() {
+    if (flag == 1) {
+      Fluttertoast.showToast(
+        msg: "Post Deleted!",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.white,
+        fontSize: 12.0,
+      );
+      Navigator.push(
+        context,
+        new MaterialPageRoute(builder: (context) => new FeedLogin()),
+      );
+
+      flag = 0;
+    } else {
+      Fluttertoast.showToast(
+        msg: "Unable to delete, please try again!",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.white,
+        fontSize: 12.0,
+      );
+    }
   }
 }
