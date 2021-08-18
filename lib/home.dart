@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:movies/dashboard.dart';
 import 'Auth/login.dart';
 import 'feed.dart';
 
@@ -85,7 +86,7 @@ class Home extends StatelessWidget {
                         child: FlatButton(
                           onPressed: () => Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Login())
+                              MaterialPageRoute(builder: (context) => Dashboard())
                           ),
                           padding: EdgeInsets.all(10.0),
                           child: Container(
