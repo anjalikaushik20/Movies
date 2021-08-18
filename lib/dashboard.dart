@@ -1,4 +1,5 @@
 import 'package:movies/movie/new-movie.dart';
+import 'package:movies/feed-login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -79,7 +80,12 @@ class Dashboard extends StatelessWidget {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black)),
                         child: FlatButton(
-                          onPressed: () => {},
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FeedLogin(),
+                            ),
+                          ),
                           padding: EdgeInsets.all(10.0),
                           child: Container(
                             padding: EdgeInsets.symmetric(
