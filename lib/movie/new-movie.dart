@@ -93,7 +93,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Enter Occupation',
+                        hintText: 'Enter Director',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -131,7 +131,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Your Movie here!',
+                        hintText: 'Your poster here!',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
