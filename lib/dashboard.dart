@@ -1,5 +1,5 @@
 import 'package:movies/movie/new-movie.dart';
-import 'package:movies/feed-login.dart';
+import 'package:movies/Auth/feed-login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

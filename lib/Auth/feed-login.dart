@@ -1,8 +1,8 @@
-import 'package:movies/movie/movie-details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
+import 'movie-details-login.dart';
 
 class FeedLogin extends StatefulWidget {
   @override
@@ -87,7 +87,7 @@ class _FeedLoginState extends State<FeedLogin> {
                                     onTap: () => Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => MovieDetail(
+                                            builder: (context) => MovieDetailLogin(
                                                   movie: snapshot.data[index],
                                                 ))),
                                     child: Padding(
