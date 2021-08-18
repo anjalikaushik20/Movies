@@ -75,7 +75,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Enter Fullname',
+                        hintText: 'Enter Director\'s name',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -85,24 +85,6 @@ class _MovieEntryState extends State<MovieEntry> {
                       textAlign: TextAlign.left,
                       onChanged: (text) {
                         this.name = text;
-                      },
-                    ),
-                    SizedBox(height: 7),
-                    TextField(
-                      style: GoogleFonts.vt323(fontSize: 20),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: 'Enter Director',
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.black, width: 2.0),
-                        ),
-                      ),
-                      textAlign: TextAlign.left,
-                      onChanged: (text) {
-                        this.occupation = text;
                       },
                     ),
                     SizedBox(height: 7),
@@ -131,7 +113,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Your poster here!',
+                        hintText: 'Your description here!',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:

@@ -102,7 +102,7 @@ class _FeedLoginState extends State<FeedLogin> {
                                                 GoogleFonts.vt323(fontSize: 30),
                                           ),
                                           Text(
-                                            'By ${snapshot.data[index].data['name']} [${snapshot.data[index].data['occupation']}]',
+                                            '${snapshot.data[index].data['name']} [Director]',
                                             style:
                                                 GoogleFonts.vt323(fontSize: 20),
                                           ),

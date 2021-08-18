@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
-
+//add image to feed
 class Feed extends StatefulWidget {
   @override
   _FeedState createState() => _FeedState();
@@ -102,7 +102,7 @@ class _FeedState extends State<Feed> {
                                                 GoogleFonts.vt323(fontSize: 30),
                                           ),
                                           Text(
-                                            'By ${snapshot.data[index].data['name']} [${snapshot.data[index].data['occupation']}]',
+                                            '${snapshot.data[index].data['name']} [Director]',
                                             style:
                                                 GoogleFonts.vt323(fontSize: 20),
                                           ),

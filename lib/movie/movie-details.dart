@@ -77,7 +77,7 @@ class _MovieDetailState extends State<MovieDetail> {
                             textAlign: TextAlign.left,
                           ),
                           Text(
-                            '(by ${widget.movie.data['name']})',
+                            '(${widget.movie.data['name']})',
                             style: TextStyle(
                               fontFamily: 'Subway',
                               fontSize: 25,
@@ -85,7 +85,7 @@ class _MovieDetailState extends State<MovieDetail> {
                             textAlign: TextAlign.left,
                           ),
                           Text(
-                            '[${widget.movie.data['occupation']}]',
+                            '[Director]',
                             style: TextStyle(
                               fontFamily: 'Chenier',
                               fontSize: 20,

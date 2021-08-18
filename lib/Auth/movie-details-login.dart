@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies/Auth/feed-login.dart';
+import 'package:movies/movie/edit.dart';
 
 class MovieDetailLogin extends StatefulWidget {
   final DocumentSnapshot movie;
@@ -64,7 +65,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                 children: [
                   FlatButton(
                     onPressed: (){
-                      //edit function
+                      _edit();
                     }, 
                     child: Icon(
                       Icons.edit,
@@ -74,7 +75,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                   VerticalDivider(),
                   FlatButton(
                     onPressed: (){
-                      //delete function
+
                       _delete();
                     }, 
                     child: Icon(
@@ -112,7 +113,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                             textAlign: TextAlign.left,
                           ),
                           Text(
-                            '(by ${widget.movie.data['name']})',
+                            '(${widget.movie.data['name']})',
                             style: TextStyle(
                               fontFamily: 'Subway',
                               fontSize: 25,
@@ -120,7 +121,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                             textAlign: TextAlign.left,
                           ),
                           Text(
-                            '[${widget.movie.data['occupation']}]',
+                            '[Director]',
                             style: TextStyle(
                               fontFamily: 'Chenier',
                               fontSize: 20,
@@ -148,6 +149,18 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
     );
   }
 
+  void _edit() {
+    var uid = widget.movie.documentID;
+    Navigator.push(
+      context, 
+      MaterialPageRoute(
+        builder: (context) => EditEntry(
+          movie: widget.movie,
+        ),
+        ),
+      );
+  }
+
   void _delete() async {
     var uid = widget.movie.documentID;
     await databaseReference.collection("movies").document(uid).delete();
@@ -155,7 +168,6 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
     flag = 1;
     _postDeleted();
   }
-
   void _postDeleted() {
     if (flag == 1) {
       Fluttertoast.showToast(
