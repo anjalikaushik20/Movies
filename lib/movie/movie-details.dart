@@ -50,6 +50,9 @@ class _MovieDetailState extends State<MovieDetail> {
               ],
             ),
             Divider(thickness: 2, color: Colors.black,),
+            FlatButton(
+                      onPressed: (){Navigator.pop(context);},  //fix this
+                      child: Icon(Icons.arrow_back, color:Colors.black)),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
               decoration: BoxDecoration(

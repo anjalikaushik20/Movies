@@ -176,6 +176,9 @@ class _LoginScreenState extends State<LoginScreen> {
               thickness: 2,
               color: Colors.black,
             ),
+            FlatButton(
+                      onPressed: (){Navigator.pop(context);},  //fix this
+                      child: Icon(Icons.arrow_back, color:Colors.black)),
             Center(
               child: Container(
                 padding: EdgeInsets.all(20.0),

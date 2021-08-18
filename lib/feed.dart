@@ -63,6 +63,9 @@ class _FeedState extends State<Feed> {
               ],
             ),
             Divider(thickness: 2, color: Colors.black,),
+            FlatButton(
+              onPressed: (){Navigator.pop(context);}, 
+              child: Icon(Icons.arrow_back, color:Colors.black)),
             Expanded(
               child: Container(
                 child: FutureBuilder(

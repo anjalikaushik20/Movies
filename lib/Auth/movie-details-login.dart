@@ -64,6 +64,9 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   FlatButton(
+                      onPressed: (){Navigator.pop(context);},  //fix this
+                      child: Icon(Icons.arrow_back, color:Colors.black)),
+                  FlatButton(
                     onPressed: (){
                       _edit();
                     }, 

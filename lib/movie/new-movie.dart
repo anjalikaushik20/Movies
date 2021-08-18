@@ -158,6 +158,9 @@ class _MovieEntryState extends State<MovieEntry> {
                         color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
+                    FlatButton(
+                      onPressed: (){Navigator.pop(context);},  //fix this
+                      child: Icon(Icons.arrow_back, color:Colors.black)),
                   ],
                 ),
               ),

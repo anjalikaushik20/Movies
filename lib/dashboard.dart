@@ -40,6 +40,9 @@ class Dashboard extends StatelessWidget {
                 ),
               ],
             ),
+            FlatButton(
+              onPressed: (){Navigator.pop(context);}, 
+              child: Icon(Icons.arrow_back, color:Colors.black)),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
