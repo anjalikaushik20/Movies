@@ -122,7 +122,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Your description here!',
+                        hintText: 'Your description here! (max 20 words)',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -181,9 +181,9 @@ class _MovieEntryState extends State<MovieEntry> {
                         //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
-                    TextButton(
-                      onPressed: (){Navigator.pop(context);},  //fix this
-                      child: Icon(Icons.arrow_back, color:Colors.black)),
+                    // TextButton(
+                    //   onPressed: () => {Navigator.pop(context)},  //fix this
+                    //   child: Icon(Icons.arrow_back, color:Colors.black)),
                   ],
                 ),
               ),
