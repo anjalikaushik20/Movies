@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies/Auth/feed-login.dart';
 import 'package:movies/movie/edit.dart';
@@ -173,31 +173,31 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
   }
   void _postDeleted() {
     if (flag == 1) {
-      Fluttertoast.showToast(
-        msg: "Post Deleted!",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.black,
-        textColor: Colors.white,
-        fontSize: 12.0,
-      );
+      // Fluttertoast.showToast(
+      //   msg: "Post Deleted!",
+      //   toastLength: Toast.LENGTH_SHORT,
+      //   gravity: ToastGravity.BOTTOM,
+      //   timeInSecForIosWeb: 1,
+      //   backgroundColor: Colors.black,
+      //   textColor: Colors.white,
+      //   fontSize: 12.0,
+      // );
       Navigator.push(
         context,
         new MaterialPageRoute(builder: (context) => new FeedLogin()),
       );
 
       flag = 0;
-    } else {
-      Fluttertoast.showToast(
-        msg: "Unable to delete, please try again!",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.black,
-        textColor: Colors.white,
-        fontSize: 12.0,
-      );
+    // } else {
+    //   Fluttertoast.showToast(
+    //     msg: "Unable to delete, please try again!",
+    //     toastLength: Toast.LENGTH_SHORT,
+    //     gravity: ToastGravity.BOTTOM,
+    //     timeInSecForIosWeb: 1,
+    //     backgroundColor: Colors.black,
+    //     textColor: Colors.white,
+    //     fontSize: 12.0,
+    //   );
     }
   }
 }

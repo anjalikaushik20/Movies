@@ -32,7 +32,7 @@ dependencies:
   firebase_auth: ^0.16.1
   cloud_firestore: ^0.13.7
   splashscreen: ^1.2.0
-  fluttertoast: ^4.0.0
+  #fluttertoast: ^4.0.0
   image_picker: ^0.6.7+22
 
 dev_dependencies:
@@ -59,6 +59,7 @@ flutter:
     - assets/images/login.png
     - assets/images/phone_logo.png
     - assets/images/title-lines.png
+    - assets/fonts/SubwayNovella-KEw7.ttf
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

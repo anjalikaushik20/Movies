@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 import 'package:movies/dashboard.dart';
 
 class NewMovie extends StatelessWidget {
@@ -186,31 +186,31 @@ class _MovieEntryState extends State<MovieEntry> {
 
   void _postSuccess() {
     if (flag == 1) {
-      Fluttertoast.showToast(
-        msg: "Posted Successfully!",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.black,
-        textColor: Colors.white,
-        fontSize: 12.0,
-      );
+      // Fluttertoast.showToast(
+      //   msg: "Posted Successfully!",
+      //   toastLength: Toast.LENGTH_SHORT,
+      //   gravity: ToastGravity.BOTTOM,
+      //   timeInSecForIosWeb: 1,
+      //   backgroundColor: Colors.black,
+      //   textColor: Colors.white,
+      //   fontSize: 12.0,
+      // );
       Navigator.push(
         context,
         new MaterialPageRoute(builder: (context) => new Dashboard()),
       );
 
       flag = 0;
-    } else {
-      Fluttertoast.showToast(
-        msg: "Unable to post, please try again!",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.black,
-        textColor: Colors.white,
-        fontSize: 12.0,
-      );
-    }
+    // } else {
+    //   Fluttertoast.showToast(
+    //     msg: "Unable to post, please try again!",
+    //     toastLength: Toast.LENGTH_SHORT,
+    //     gravity: ToastGravity.BOTTOM,
+    //     timeInSecForIosWeb: 1,
+    //     backgroundColor: Colors.black,
+    //     textColor: Colors.white,
+    //     fontSize: 12.0,
+    //   );
+     }
   }
 }
