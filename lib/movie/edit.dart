@@ -27,7 +27,7 @@ class EditEntry extends StatefulWidget {
 }
 
 class _EditEntryState extends State<EditEntry> {
-  String name, occupation, title, description;
+  String name, title, description;
   bool _pressed = false;
   final databaseReference = Firestore.instance;
   int flag = 0;
@@ -78,11 +78,14 @@ class _EditEntryState extends State<EditEntry> {
                   children: <Widget>[
                     SizedBox(height: 7),
                     TextField(
+                      controller: TextEditingController(
+                        text: '${widget.movie.data['name']}',
+                        ),
                       style: GoogleFonts.vt323(fontSize: 20),
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Enter Fullname',
+                        //hintText: '${widget.movie.data['name']}',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -96,29 +99,14 @@ class _EditEntryState extends State<EditEntry> {
                     ),
                     SizedBox(height: 7),
                     TextField(
-                      style: GoogleFonts.vt323(fontSize: 20),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: 'Enter Director',
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.black, width: 2.0),
+                      controller: TextEditingController(
+                        text: '${widget.movie.data['title']}',
                         ),
-                      ),
-                      textAlign: TextAlign.left,
-                      onChanged: (text) {
-                        this.occupation = text;
-                      },
-                    ),
-                    SizedBox(height: 7),
-                    TextField(
                       style: GoogleFonts.vt323(fontSize: 20),
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Enter Title',
+                        //hintText: '${widget.movie.data['title']}',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -132,13 +120,16 @@ class _EditEntryState extends State<EditEntry> {
                     ),
                     SizedBox(height: 10),
                     TextField(
+                      controller: TextEditingController(
+                        text: '${widget.movie.data['description']}',
+                        ),
                       maxLines: 50,
                       minLines: 1,
                       style: GoogleFonts.vt323(fontSize: 20),
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        hintText: 'Your poster here!',
+                        //hintText: '${widget.movie.data['description']}',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
@@ -176,13 +167,15 @@ class _EditEntryState extends State<EditEntry> {
                           _post();
                         },
                         child: Text(
-                          'Post',
+                          'Confirm',
                           style: GoogleFonts.vt323(fontSize: 25),
                         ),
                         //textColor: _pressed ? Colors.white : Colors.black,
                         //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
+                    Text("Note: Kindly edit all three entries to prevent erros!",
+                      style: GoogleFonts.vt323(fontSize: 15),),
                   ],
                 ),
               ),
@@ -194,11 +187,10 @@ class _EditEntryState extends State<EditEntry> {
   }
 
   void _post() async {
-    await databaseReference.collection("movies").document().updateData({
-      'description': description,
-      'name': name,
-      'occupation': occupation,
-      'title': title,
+    await databaseReference.collection("movies").document(widget.movie.documentID).updateData({
+      'description': description,//widget.movie.data['description'] + description,
+      'name': name,//widget.movie.data['name'] + name,
+      'title': title,//widget.movie.data['title'] + title,
     });
 
     flag = 1;

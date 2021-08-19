@@ -154,7 +154,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
   }
 
   void _edit() {
-    //var uid = widget.movie.documentID;
+    var uid = widget.movie.documentID;
     Navigator.push(
       context, 
       MaterialPageRoute(
