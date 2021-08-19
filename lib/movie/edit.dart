@@ -168,10 +168,8 @@ class _EditEntryState extends State<EditEntry> {
                         },
                         child: Text(
                           'Confirm',
-                          style: GoogleFonts.vt323(fontSize: 25),
+                          style: GoogleFonts.vt323(fontSize: 25, color: Colors.black),
                         ),
-                        //textColor: _pressed ? Colors.white : Colors.black,
-                        //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
                     Text("Note: Kindly edit all three entries to prevent erros!",

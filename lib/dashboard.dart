@@ -69,7 +69,7 @@ class Dashboard extends StatelessWidget {
                                 Image.asset('assets/images/feed.png'),
                                 Text(
                                   "New Entry",
-                                  style: GoogleFonts.vt323(fontSize: 30),
+                                  style: GoogleFonts.vt323(fontSize: 30, color: Colors.black),
                                 )
                               ],
                             ),
@@ -98,7 +98,7 @@ class Dashboard extends StatelessWidget {
                                 Image.asset('assets/images/login.png'),
                                 Text(
                                   "My Feed",
-                                  style: GoogleFonts.vt323(fontSize: 30),
+                                  style: GoogleFonts.vt323(fontSize: 30, color: Colors.black),
                                 )
                               ],
                             ),

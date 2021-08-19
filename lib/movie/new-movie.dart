@@ -175,10 +175,8 @@ class _MovieEntryState extends State<MovieEntry> {
                         },
                         child: Text(
                           'Post',
-                          style: GoogleFonts.vt323(fontSize: 25),
+                          style: GoogleFonts.vt323(fontSize: 25, color: Colors.black),
                         ),
-                        //textColor: _pressed ? Colors.white : Colors.black,
-                        //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
                     // TextButton(

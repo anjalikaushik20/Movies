@@ -70,7 +70,7 @@ class Home extends StatelessWidget {
                                 Image.asset('assets/images/feed.png'),
                                 Text(
                                   "Feed",
-                                  style: GoogleFonts.vt323(fontSize: 40),
+                                  style: GoogleFonts.vt323(fontSize: 40, color: Colors.black),
                                 )
                               ],
                             ),
@@ -97,7 +97,7 @@ class Home extends StatelessWidget {
                                 Image.asset('assets/images/login.png'),
                                 Text(
                                   "Login",
-                                  style: GoogleFonts.vt323(fontSize: 40),
+                                  style: GoogleFonts.vt323(fontSize: 40, color: Colors.black),
                                 )
                               ],
                             ),
