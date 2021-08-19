@@ -3,8 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'package:fluttertoast/fluttertoast.dart';
 import 'package:movies/dashboard.dart';
+import 'package:movies/movie/add-image.dart';
+import 'dart:io';
 
 class NewMovie extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,16 +18,22 @@ class NewMovie extends StatelessWidget {
 }
 
 class MovieEntry extends StatefulWidget {
+  File _image;
   @override
   _MovieEntryState createState() => _MovieEntryState();
+
+  void addImage(_image){
+    //
+  }
 }
 
 class _MovieEntryState extends State<MovieEntry> {
-  String name, occupation, title, description;
+  String name, title, description;
   bool _pressed = false;
   final databaseReference = Firestore.instance;
   int flag = 0;
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  File _image;
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +135,19 @@ class _MovieEntryState extends State<MovieEntry> {
                       },
                     ),
                     SizedBox(height: 10),
-                    //add image option here
+                    Text(
+                      "Add Image",
+                      style: GoogleFonts.vt323(fontSize: 25),
+                      ),
+                    TextButton(
+                      onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AddImage(),
+                            ),
+                          ),
+                      child: Icon(Icons.image, color: Colors.black),
+                      ),
                     SizedBox(height: 10),
                     GestureDetector(
                       onTapDown: (TapDownDetails details) {
@@ -177,7 +198,6 @@ class _MovieEntryState extends State<MovieEntry> {
     await databaseReference.collection("movies").document().setData({
       'description': description,
       'name': name,
-      'occupation': occupation,
       'title': title,
     });
 
@@ -213,5 +233,9 @@ class _MovieEntryState extends State<MovieEntry> {
     //     fontSize: 12.0,
     //   );
      }
+  }
+
+  void addImage(_image){
+    //
   }
 }
