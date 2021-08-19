@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:movies/dashboard.dart';
-import 'Auth/login.dart';
+//import 'Auth/login.dart';
 import 'feed.dart';
 
 class Home extends StatelessWidget {
@@ -55,13 +55,13 @@ class Home extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black)),
-                        child: FlatButton(
+                        child: TextButton(
                           onPressed: () =>
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) => Feed())
                             ),
-                          padding: EdgeInsets.all(10.0),
+                          //padding: EdgeInsets.all(10.0),
                           child: Container(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 5, vertical: 15),
@@ -83,12 +83,12 @@ class Home extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black)),
-                        child: FlatButton(
+                        child: TextButton(
                           onPressed: () => Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => Dashboard())
                           ),
-                          padding: EdgeInsets.all(10.0),
+                          //padding: EdgeInsets.all(10.0),
                           child: Container(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 5, vertical: 15),

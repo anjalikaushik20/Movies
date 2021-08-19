@@ -126,6 +126,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       },
                     ),
                     SizedBox(height: 10),
+                    SizedBox(height: 10),
                     GestureDetector(
                       onTapDown: (TapDownDetails details) {
                         setState(() {
@@ -145,7 +146,7 @@ class _MovieEntryState extends State<MovieEntry> {
                           print(_pressed);
                         });
                       },
-                      child: FlatButton(
+                      child: TextButton(
                         //highlightColor: Colors.black,
                         onPressed: () {
                           _post();
@@ -154,11 +155,11 @@ class _MovieEntryState extends State<MovieEntry> {
                           'Post',
                           style: GoogleFonts.vt323(fontSize: 25),
                         ),
-                        textColor: _pressed ? Colors.white : Colors.black,
-                        color: _pressed ? Colors.black : Colors.white,
+                        //textColor: _pressed ? Colors.white : Colors.black,
+                        //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
-                    FlatButton(
+                    TextButton(
                       onPressed: (){Navigator.pop(context);},  //fix this
                       child: Icon(Icons.arrow_back, color:Colors.black)),
                   ],

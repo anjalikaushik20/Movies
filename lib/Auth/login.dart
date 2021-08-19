@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             contentPadding: EdgeInsets.all(10.0),
             actions: <Widget>[
-              new FlatButton(
+              new TextButton(
                 child: Text(
                   'Done!',
                   style: GoogleFonts.vt323(fontSize: 25, color: Colors.black),
@@ -176,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
               thickness: 2,
               color: Colors.black,
             ),
-            FlatButton(
+            TextButton(
                       onPressed: (){Navigator.pop(context);},  //fix this
                       child: Icon(Icons.arrow_back, color:Colors.black)),
             Center(
@@ -242,15 +242,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           print(_pressed);
                         });
                       },
-                      child: FlatButton(
+                      child: TextButton(
                         //highlightColor: Colors.black,
                         onPressed: verifyPhone,
                         child: Text(
                           'Verify',
                           style: GoogleFonts.vt323(fontSize: 25),
                         ),
-                        textColor: _pressed ? Colors.white : Colors.black,
-                        color: _pressed ? Colors.black : Colors.white,
+                        //textColor: _pressed ? Colors.white : Colors.black,
+                        //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
                   ],

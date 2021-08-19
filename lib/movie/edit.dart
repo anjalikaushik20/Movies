@@ -170,7 +170,7 @@ class _EditEntryState extends State<EditEntry> {
                           print(_pressed);
                         });
                       },
-                      child: FlatButton(
+                      child: TextButton(
                         //highlightColor: Colors.black,
                         onPressed: () {
                           _post();
@@ -179,8 +179,8 @@ class _EditEntryState extends State<EditEntry> {
                           'Post',
                           style: GoogleFonts.vt323(fontSize: 25),
                         ),
-                        textColor: _pressed ? Colors.white : Colors.black,
-                        color: _pressed ? Colors.black : Colors.white,
+                        //textColor: _pressed ? Colors.white : Colors.black,
+                        //color: _pressed ? Colors.black : Colors.white,
                       ),
                     ),
                   ],

@@ -63,10 +63,10 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  FlatButton(
+                  TextButton(
                       onPressed: (){Navigator.pop(context);},  //fix this
                       child: Icon(Icons.arrow_back, color:Colors.black)),
-                  FlatButton(
+                  TextButton(
                     onPressed: (){
                       _edit();
                     }, 
@@ -76,7 +76,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                       ),
                     ),
                   VerticalDivider(),
-                  FlatButton(
+                  TextButton(
                     onPressed: (){
 
                       _delete();
@@ -153,7 +153,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
   }
 
   void _edit() {
-    var uid = widget.movie.documentID;
+    //var uid = widget.movie.documentID;
     Navigator.push(
       context, 
       MaterialPageRoute(

@@ -40,7 +40,7 @@ class Dashboard extends StatelessWidget {
                 ),
               ],
             ),
-            FlatButton(
+            TextButton(
               onPressed: (){Navigator.pop(context);}, 
               child: Icon(Icons.arrow_back, color:Colors.black)),
             Expanded(
@@ -53,14 +53,14 @@ class Dashboard extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black)),
-                        child: FlatButton(
+                        child: TextButton(
                           onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => NewMovie(),
                             ),
                           ),
-                          padding: EdgeInsets.all(10.0),
+                          //padding: EdgeInsets.all(10.0),
                           child: Container(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 5, vertical: 15),
@@ -82,14 +82,14 @@ class Dashboard extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black)),
-                        child: FlatButton(
+                        child: TextButton(
                           onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => FeedLogin(),
                             ),
                           ),
-                          padding: EdgeInsets.all(10.0),
+                          //padding: EdgeInsets.all(10.0),
                           child: Container(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 5, vertical: 15),
