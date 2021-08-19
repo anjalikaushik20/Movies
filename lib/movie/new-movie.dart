@@ -126,6 +126,7 @@ class _MovieEntryState extends State<MovieEntry> {
                       },
                     ),
                     SizedBox(height: 10),
+                    //add image option here
                     SizedBox(height: 10),
                     GestureDetector(
                       onTapDown: (TapDownDetails details) {

@@ -109,6 +109,7 @@ class _FeedState extends State<Feed> {
                                             style:
                                                 GoogleFonts.vt323(fontSize: 20),
                                           ),
+                                          Image.asset("assets/images/movie.jpg"),
                                         ],
                                       ),
                                     ),

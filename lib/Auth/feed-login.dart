@@ -109,6 +109,7 @@ class _FeedLoginState extends State<FeedLogin> {
                                             style:
                                                 GoogleFonts.vt323(fontSize: 20),
                                           ),
+                                          Image.asset("assets/images/movie.jpg"),
                                         ],
                                       ),
                                     ),

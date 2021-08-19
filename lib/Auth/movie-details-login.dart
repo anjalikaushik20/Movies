@@ -132,6 +132,7 @@ class _MovieDetailLoginState extends State<MovieDetailLogin> {
                             textAlign: TextAlign.justify,
                           ),
                           Image.asset('assets/images/divider.png'),
+                          Image.asset("assets/images/movie.jpg"),
                           Text(
                             widget.movie.data['description'],
                             style: TextStyle(

@@ -54,7 +54,7 @@ class _MovieDetailState extends State<MovieDetail> {
                       onPressed: (){Navigator.pop(context);},  //fix this
                       child: Icon(Icons.arrow_back, color:Colors.black)),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/atricle_back.png"),
@@ -96,11 +96,12 @@ class _MovieDetailState extends State<MovieDetail> {
                             textAlign: TextAlign.justify,
                           ),
                           Image.asset('assets/images/divider.png'),
+                          Image.asset("assets/images/movie.jpg"),
                           Text(
                             widget.movie.data['description'],
                             style: TextStyle(
                               fontFamily: 'Chenier',
-                              fontSize: 25,
+                              fontSize: 18,
                             ),
                             textAlign: TextAlign.justify,
                           ),
