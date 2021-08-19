@@ -33,7 +33,7 @@ dependencies:
   cloud_firestore: ^0.13.7
   splashscreen: ^1.2.0
   fluttertoast: ^4.0.0
-  image_picker: ^0.8.3+2
+  image_picker: ^0.6.7+22
 
 dev_dependencies:
   flutter_test:
