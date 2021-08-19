@@ -59,9 +59,19 @@ flutter:
     - assets/images/login.png
     - assets/images/phone_logo.png
     - assets/images/title-lines.png
-    - assets/fonts/SubwayNovella-KEw7.ttf
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  
+  fonts:
+    - family: Chenier
+      fonts:
+        - asset: assets/fonts/ChenierRegular-8rO2.ttf
+    - family: Anaeve
+      fonts:
+        - asset: assets/fonts/AnaeveRegular-7oL4.ttf
+    - family: Subway
+      fonts:
+        - asset: assets/fonts/SubwayNovella-KEw7.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
